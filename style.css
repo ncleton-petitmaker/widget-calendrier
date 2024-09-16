@@ -67,14 +67,17 @@ body {
 }
 
 .current-day {
-    background-color: #C1815C !important;
-    color: white !important;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
+    background-color: #C1815C !important; /* Assure la couleur correcte */
+    color: white !important; /* Assure que le texte est bien visible */
+    border-radius: 50%; /* Pour créer un cercle parfait */
+    width: 30px; /* Ajuste la largeur pour le cercle */
+    height: 30px; /* Ajuste la hauteur pour le cercle */
+    line-height: 30px; /* Centre le texte verticalement */
+    display: flex; /* Utilise flex pour un centrage souple */
+    align-items: center; /* Centre le texte verticalement */
+    justify-content: center; /* Centre le texte horizontalement */
+    margin: 0 auto; /* Centre le cercle dans la cellule */
+    padding: 0; /* Retire les espacements internes */
+    box-sizing: border-box; /* Inclut les bordures dans le calcul */
 }
+
