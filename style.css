@@ -70,18 +70,15 @@ body {
 }
 
 .current-day {
-    background-color: #C1815C !important; /* Assure la couleur correcte */
+    background-color: #C1815C !important; /* Assure que la couleur est appliquée */
     color: white !important; /* Assure que le texte est bien visible */
     border-radius: 50%; /* Pour créer un cercle parfait */
     width: 30px; /* Ajuste la largeur pour le cercle */
     height: 30px; /* Ajuste la hauteur pour le cercle */
     line-height: 30px; /* Centre le texte verticalement */
-    display: flex; /* Utilise flex pour un centrage souple */
+    display: inline-flex; /* Utilise inline-flex pour un centrage souple */
     align-items: center; /* Centre le texte verticalement */
     justify-content: center; /* Centre le texte horizontalement */
-    margin: 0 auto; /* Centre le cercle dans la cellule */
-    overflow: hidden; /* Empêche tout débordement */
-    padding: 0; /* Retire les espacements internes */
-    box-sizing: border-box; /* Inclut les bordures dans le calcul */
+    margin: auto; /* Centre le cercle dans la cellule */
+    transform: translateY(4px); /* Ajuste davantage la position verticale vers le bas */
 }
-
