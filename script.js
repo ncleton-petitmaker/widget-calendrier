@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         calendarBody.innerHTML = '';
         monthYear.textContent = `${mois[month]} ${year}`;
 
-        const firstDay = (new Date(year, month).getDay() + 6) % 7; // Lundi comme premier jour
+        const firstDay = (new Date(year, month).getDay() + 6) % 7; // Ajuste pour que lundi soit le premier jour (0 = lundi)
         const daysInMonth = 32 - new Date(year, month, 32).getDate();
 
         let date = 1;
@@ -33,9 +33,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     let cell = document.createElement('td');
                     cell.textContent = date;
+
+                    // Vérifie si c'est le jour actuel
                     if (date === new Date().getDate() && year === new Date().getFullYear() && month === new Date().getMonth()) {
                         cell.classList.add('current-day');
+                        // Applique les styles en ligne pour s'assurer que tout s'affiche correctement
+                        cell.style.backgroundColor = '#C1815C';
+                        cell.style.color = 'white';
+                        cell.style.borderRadius = '50%';
+                        cell.style.width = '30px';
+                        cell.style.height = '30px';
+                        cell.style.display = 'flex';
+                        cell.style.alignItems = 'center';
+                        cell.style.justifyContent = 'center';
+                        cell.style.margin = '0 auto';
+                        cell.style.position = 'absolute';
+                        cell.style.top = '50%';
+                        cell.style.left = '50%';
+                        cell.style.transform = 'translate(-50%, -50%)';
                     }
+
                     row.appendChild(cell);
                     date++;
                 }
