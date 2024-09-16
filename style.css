@@ -80,4 +80,6 @@ body {
     align-items: center; /* Centre le texte verticalement */
     justify-content: center; /* Centre le texte horizontalement */
     margin: 0 auto; /* Centre le cercle dans la cellule */
+    box-sizing: border-box; /* Inclut les bordures et les marges dans le calcul de la largeur */
+    overflow: hidden; /* Empêche le contenu de déborder du cercle */
 }
