@@ -52,7 +52,6 @@ body {
     width: 14.28%; /* Chaque cellule prend 1/7 de la largeur */
     height: 40px; /* Assure une hauteur cohérente pour toutes les cellules */
     vertical-align: middle; /* Centre le contenu verticalement */
-    position: relative; /* Nécessaire pour le centrage absolu */
 }
 
 #calendar-table th {
@@ -77,14 +76,8 @@ body {
     width: 30px; /* Ajuste la largeur pour le cercle */
     height: 30px; /* Ajuste la hauteur pour le cercle */
     line-height: 30px; /* Centre le texte verticalement */
-    display: flex; /* Utilise flexbox pour un centrage souple */
+    display: inline-flex; /* Utilise inline-flex pour un centrage souple */
     align-items: center; /* Centre le texte verticalement */
     justify-content: center; /* Centre le texte horizontalement */
     margin: 0 auto; /* Centre le cercle dans la cellule */
-    box-sizing: border-box; /* Inclut les bordures et les marges dans le calcul de la largeur */
-    overflow: hidden; /* Empêche le contenu de déborder du cercle */
-    position: absolute; /* Permet de positionner absolument l'élément dans la cellule */
-    top: 50%; /* Place le cercle au milieu verticalement */
-    left: 50%; /* Place le cercle au milieu horizontalement */
-    transform: translate(-50%, -50%); /* Centre précisément l'élément */
 }
