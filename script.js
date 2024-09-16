@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         calendarBody.innerHTML = '';
         monthYear.textContent = `${mois[month]} ${year}`;
 
-        const firstDay = (new Date(year, month).getDay() + 6) % 7; // Ajuste pour que lundi soit le premier jour (0 = lundi)
+        const firstDay = (new Date(year, month).getDay() + 6) % 7; // Lundi comme premier jour
         const daysInMonth = 32 - new Date(year, month, 32).getDate();
 
         let date = 1;
