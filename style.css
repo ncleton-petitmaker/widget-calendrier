@@ -63,6 +63,7 @@ body {
     cursor: pointer;
     padding: 0; /* Retire les espacements pour une meilleure adaptation du cercle */
     height: 40px; /* Ajuste la hauteur des cellules */
+    position: relative; /* Nécessaire pour le centrage absolu */
 }
 
 #calendar-table td:hover {
