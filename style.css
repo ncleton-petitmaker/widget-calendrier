@@ -1,22 +1,22 @@
 body {
     margin: 0;
-    overflow: hidden; /* Empêche les barres de défilement */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Centre le calendrier verticalement */
-    background-color: #FFFFFF; /* Fond blanc pour la page */
+    height: 100vh;
+    background-color: #FFFFFF;
 }
 
 #calendar {
     width: 100%;
-    max-width: 320px; /* Ajuste la largeur maximale pour éviter les coupures */
+    max-width: 320px;
     border: 1px solid #ddd;
     border-radius: 15px;
     overflow: hidden;
     font-family: 'Arial', sans-serif;
-    background-color: white; /* Fond blanc pour le calendrier */
-    box-sizing: border-box; /* Inclut les bordures dans le calcul de la largeur */
+    background-color: white;
+    box-sizing: border-box;
 }
 
 #calendar-header {
@@ -24,11 +24,11 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #C1815C; /* Couleur de fond ajustée */
+    background-color: #C1815C;
     color: white;
     font-weight: bold;
-    border-top-left-radius: 15px; /* Arrondi des coins du haut */
-    border-top-right-radius: 15px; /* Arrondi des coins du haut */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 #calendar-header button {
@@ -42,16 +42,15 @@ body {
 #calendar-table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed; /* Fixe la largeur des colonnes pour éviter les débordements */
-    background-color: white; /* Fond blanc pour le tableau */
+    table-layout: fixed;
 }
 
 #calendar-table th, #calendar-table td {
     text-align: center;
-    padding: 0; /* Supprime les espacements pour une meilleure adaptation du cercle */
-    width: 14.28%; /* Chaque cellule prend 1/7 de la largeur */
-    height: 40px; /* Assure une hauteur cohérente pour toutes les cellules */
-    vertical-align: middle; /* Centre le contenu verticalement */
+    padding: 0;
+    width: 14.28%;
+    height: 40px;
+    vertical-align: middle;
 }
 
 #calendar-table th {
@@ -61,8 +60,6 @@ body {
 
 #calendar-table td {
     cursor: pointer;
-    padding: 0; /* Retire les espacements pour une meilleure adaptation du cercle */
-    height: 40px; /* Ajuste la hauteur des cellules */
 }
 
 #calendar-table td:hover {
@@ -70,15 +67,14 @@ body {
 }
 
 .current-day {
-    background-color: #C1815C !important; /* Assure que la couleur est appliquée */
-    color: white !important; /* Assure que le texte est bien visible */
-    border-radius: 50%; /* Pour créer un cercle parfait */
-    width: 30px; /* Ajuste la largeur pour le cercle */
-    height: 30px; /* Ajuste la hauteur pour le cercle */
-    line-height: 30px; /* Centre le texte verticalement */
-    display: inline-flex; /* Utilise inline-flex pour un centrage souple */
-    align-items: center; /* Centre le texte verticalement */
-    justify-content: center; /* Centre le texte horizontalement */
-    margin: auto; /* Centre le cercle dans la cellule */
-    transform: translateY(4px); /* Ajuste davantage la position verticale vers le bas */
+    background-color: #C1815C !important;
+    color: white !important;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
 }
