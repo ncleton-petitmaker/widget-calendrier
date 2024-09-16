@@ -33,11 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     let cell = document.createElement('td');
                     cell.textContent = date;
-
-                    // Vérifie si c'est le jour actuel
                     if (date === new Date().getDate() && year === new Date().getFullYear() && month === new Date().getMonth()) {
                         cell.classList.add('current-day');
-                        // Applique les styles en ligne pour s'assurer que tout s'affiche correctement
+                        // Applique les styles en ligne pour forcer le rendu correct
                         cell.style.backgroundColor = '#C1815C';
                         cell.style.color = 'white';
                         cell.style.borderRadius = '50%';
@@ -47,12 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         cell.style.alignItems = 'center';
                         cell.style.justifyContent = 'center';
                         cell.style.margin = '0 auto';
-                        cell.style.position = 'absolute';
-                        cell.style.top = '50%';
-                        cell.style.left = '50%';
-                        cell.style.transform = 'translate(-50%, -50%)';
                     }
-
                     row.appendChild(cell);
                     date++;
                 }
