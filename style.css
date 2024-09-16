@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Empêche les barres de défilement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centre le calendrier verticalement */
+    background-color: #FFFFFF; /* Fond blanc pour la page */
+}
+
+#calendar {
+    width: 100%;
+    max-width: 320px; /* Ajuste la largeur maximale pour éviter les coupures */
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: white; /* Fond blanc pour le calendrier */
+    box-sizing: border-box; /* Inclut les bordures dans le calcul de la largeur */
+}
+
+#calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #C1815C; /* Couleur de fond ajustée */
+    color: white;
+    font-weight: bold;
+    border-top-left-radius: 15px; /* Arrondi des coins du haut */
+    border-top-right-radius: 15px; /* Arrondi des coins du haut */
+}
+
+#calendar-header button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Fixe la largeur des colonnes pour éviter les débordements */
+    background-color: white; /* Fond blanc pour le tableau */
+}
+
+#calendar-table th, #calendar-table td {
+    text-align: center;
+    padding: 0; /* Supprime les espacements pour une meilleure adaptation du cercle */
+    width: 14.28%; /* Chaque cellule prend 1/7
