@@ -42,4 +42,42 @@ body {
 #calendar-table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed
+    table-layout: fixed; /* Fixe la largeur des colonnes pour éviter les débordements */
+    background-color: white; /* Fond blanc pour le tableau */
+}
+
+#calendar-table th, #calendar-table td {
+    text-align: center;
+    padding: 0; /* Supprime les espacements pour une meilleure adaptation du cercle */
+    width: 14.28%; /* Chaque cellule prend 1/7 de la largeur */
+    height: 40px; /* Assure une hauteur cohérente pour toutes les cellules */
+    vertical-align: middle; /* Centre le contenu verticalement */
+}
+
+#calendar-table th {
+    background-color: #f0ece6;
+    color: #333;
+}
+
+#calendar-table td {
+    cursor: pointer;
+    padding: 0; /* Retire les espacements pour une meilleure adaptation du cercle */
+    height: 40px; /* Ajuste la hauteur des cellules */
+}
+
+#calendar-table td:hover {
+    background-color: #f5f5f5;
+}
+
+.current-day {
+    background-color: #C1815C !important; /* Assure que la couleur est appliquée */
+    color: white !important; /* Assure que le texte est bien visible */
+    border-radius: 50%; /* Pour créer un cercle parfait */
+    width: 30px; /* Ajuste la largeur pour le cercle */
+    height: 30px; /* Ajuste la hauteur pour le cercle */
+    line-height: 30px; /* Centre le texte verticalement */
+    display: flex; /* Utilise flex pour un centrage souple */
+    align-items: center; /* Centre le texte verticalement */
+    justify-content: center; /* Centre le texte horizontalement */
+    margin: auto; /* Centre le cercle dans la cellule */
+}
